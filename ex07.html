@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // function doa(i){
+            //     // setTimeout(function () {
+            //     //     alert("실행" + i);
+            //     // }, 2000);
+            //     setTimeout(()=> {
+            //         alert("실행" + i);
+            //     }, 2000);
+            //     // alert(i);
+            // }
+            // for (var i = 0; i < 3; i++) {
+            //     //1초뒤에 실행 i라는거 출력 예약 
+            //     doa(i);
+                for (var i =0; i<3 ; i++){
+                    ((i) => {
+                        setTimeout(()=>{
+                            alert(i);
+                        },1000);
+                    })(i);
+                }
+        </script>
+    </head>
+    <body></body>
+</html>
