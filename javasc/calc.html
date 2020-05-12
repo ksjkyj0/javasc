@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: brown;
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            
+        }
+        button:active{
+            background-color: burlywood;
+        }
+            
+        
+    </style>
+    <script>
+        function insert(char){
+            var input_A = document.getElementById("input_A");
+            input_A.value = input_A.value + char;
+        }
+        function clearValue(){
+            document.getElementById("input_A").value="";
+    
+        }
+        function result(){
+            var textValue  = document.getElementById("input_A").value;
+            console.log(textValue);
+            var num = eval(textValue);
+            document.getElementById("input_A").value = num; 
+        }
+
+    </script>
+</head>
+<body>
+    <div id="calc">
+        <input type="text" id="input_A" name="input_A"/>
+        <button id="result" onclick="result()">
+            =
+        </button>
+    </div>
+    <div id="button_int">
+        <button id="one" onclick="insert(1)">
+            1
+        </button>
+        <button id="two" onclick="insert(2)">
+            2
+        </button>
+        <button id="three"onclick="insert(3)">
+            3
+        </button>
+        <button id="add"onclick="insert('+')">
+            +
+        </button>
+    </div>
+    <div>
+        <button id="four"onclick="insert(4)">
+            4
+        </button>
+        <button id="five"onclick="insert(5)">
+            5
+        </button>
+        <button id="six"onclick="insert(6)">
+            6
+        </button>
+        <button id="sub"onclick="insert('-')">
+            -
+        </button>
+    </div>
+    <div>
+        <button id="seven"onclick="insert(7)">
+            7
+        </button>
+        <button id="eight"onclick="insert(8)">
+            8
+        </button>
+        <button id="nine"onclick="insert(9)">
+            9
+        </button>
+        <button id="mul"onclick="insert('*')">
+            *
+        </button>
+    </div>
+    <div>
+        <button id="decimal"onclick="insert('.')">
+            .
+        </button>
+        <button id="zero" onclick="insert(0)">
+            0
+        </button>
+        <button id="not" onclick="clearValue(0)">
+            C
+        </button>
+        <button id="div"onclick="insert('/')">
+            /
+        </button>
+    </div>
+</body>
+</html>
+<script>
+
+</script>
